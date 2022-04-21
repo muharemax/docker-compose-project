@@ -12,8 +12,7 @@ services:
       - "db"
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/demodb
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+      APP_NODE_URL: http://node_app:8081/
 
   #Node app service
   node_app:
@@ -23,8 +22,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8081:8081"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
 
   #PostgreSQL DB service
   db:
