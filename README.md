@@ -10,4 +10,5 @@ Simple docker compose project for microservices
 1. `git clone https://github.com/muharemax/docker-compose-project.git`
 2. `cd docker-compose-project`
 3. `docker compose up` (first time run will perform build)
-    - you can force a fresh build with `--force-recreate`
+    - you can force a fresh build with `--build`
+    - you can recreate containers with `--force-recreate`
